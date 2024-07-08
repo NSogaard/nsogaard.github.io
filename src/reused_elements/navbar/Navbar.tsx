@@ -10,20 +10,22 @@ const Navbar = () => {
         const portfolioOptionsList = [
             {
                 portfolioName : 'Software Engineering Portfolio',
-                portfolioPath : '/portfolio/SWEPortfolio'
+                portfolioPath : '/portfolio/SWEPortfolio',
+                isActive : true
             },
             {
-                portfolioName : 'Data Analytics Portfolio',
-                portfolioPath : '/portfolio/DAPortfolio'
+                portfolioName : 'Data Analytics Portfolio (TBD)',
+                portfolioPath : '/portfolio/DAPortfolio',
+                isActive : false
             }
         ]
 
         return (
             portfolioOptionsList.map((element, index) => {
                 return(
-                    <Box className='portDropdown'>
-                        <Link className='navBarButton' to={element.portfolioPath}>
-                            <p className='portDropdownText'>{element.portfolioName}</p>
+                    <Box className='portDropdown '>
+                        <Link className='navBarButton' to={(element.isActive) ? element.portfolioPath : ''}>
+                            <p className={'portDropdownText ' + ((element.isActive) ? 'activePortfolio' : '')}>{element.portfolioName}</p>
                         </Link>
                     </Box>
                 )

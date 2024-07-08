@@ -16,8 +16,8 @@ const EducationList = (props: {infoList : EduListInfo[], isLandscape : boolean})
                 relatedCW={element.title == 'B.A. at Case Western Reserve University (2020 - 2024)' ? <BARelatedCW /> : <BCRelatedCW />}
                 hasDialog={true}
                 isLandscape={props.isLandscape}
-                topPadding={element.topPadding}
-                bottomPadding={element.bottomPadding}                        
+                height={25}
+                isActive={true}                        
             />
         )
     })

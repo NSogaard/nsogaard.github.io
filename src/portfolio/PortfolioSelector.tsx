@@ -12,25 +12,23 @@ const PortfolioSelector = (props : {isLandscape : boolean}) => {
             <Grid item container className='portSelectorWrapper' justifyContent='center'>
                 <TextImageElement 
                     title='Software Development Portfolio'
-                    subTitle=''
                     textBody={loremIpsum}
                     imgPath='https://imageio.forbes.com/blogs-images/forbestechcouncil/files/2019/01/canva-photo-editor-8-7.png?height=640&width=640&fit=bounds'
                     redirectLink={`SWEPortfolio`}
                     hasDialog={false}
                     isLandscape={props.isLandscape}
-                    topPadding={0}
-                    bottomPadding={0}
+                    height={25}
+                    isActive={true}
                 />
                 <TextImageElement 
-                    title='Data Analytics Portfolio'
-                    subTitle=''
+                    title='Data Analytics Portfolio (To Be Completed During Boot Camp)'
                     textBody={loremIpsum}
                     imgPath='https://i.pinimg.com/originals/82/a2/18/82a2188c985ce75402ae44fc43fe7e5e.png'
                     redirectLink={`DAPortfolio`}
                     hasDialog={false}
                     isLandscape={props.isLandscape}
-                    topPadding={0}
-                    bottomPadding={0}
+                    height={25}
+                    isActive={false}
                 />
             </Grid>
         </Grid>

@@ -27,11 +27,10 @@ const WorkExperienceList = (props : {isLandscape : boolean}) => {
                 subTitle={element.weSubtitle}
                 textBody={element.weDesc}
                 imgPath={element.weImagePath}
-                relatedCW={<BARelatedCW />}
                 hasDialog={true}
                 isLandscape={props.isLandscape}
-                topPadding={0}
-                bottomPadding={0}
+                height={25}
+                isActive={true}
             />
         )
     })
