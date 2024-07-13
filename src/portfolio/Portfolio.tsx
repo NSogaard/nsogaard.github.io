@@ -7,14 +7,14 @@ import PortfolioSelector from "./PortfolioSelector.tsx";
 import { Grid } from "@mui/material";
 
 
-const Portfolio = (props : {isLandscape : boolean}) => {
+const Portfolio = (props : {isLandscape : boolean, selectedPage : string, setSelectedPage : any}) => {
     
     return (
         <div className='wrapperPage' style={{height: '100vh'}}>
-            <Navbar />
+            <Navbar selectedPage={props.selectedPage} setSelectedPage={props.setSelectedPage}/>
             <section>
                 <Grid className='topPage'>
-                    <PortfolioSelector isLandscape={props.isLandscape} />
+                    <PortfolioSelector isLandscape={props.isLandscape} setSelectedPage={props.setSelectedPage} />
                 </Grid>
                 <BottomBar isLandscape={props.isLandscape} />
             </section>      

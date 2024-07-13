@@ -5,11 +5,11 @@ import { Grid } from "@mui/material";
 import TextImageElement from "../../edu-cert/text_image_element/TextImageElement.tsx";
 import loremIpsum from "../../styling/loremIpsum.tsx";
 
-const SWEPortfolio = (props : {isLandscape : boolean}) => {
+const SWEPortfolio = (props : {isLandscape : boolean, selectedPage : string, setSelectedPage : any}) => {
 
     return(
         <div className='wrapperPage' style={{height: '100vh'}}>
-            <Navbar />
+            <Navbar selectedPage={props.selectedPage} setSelectedPage={props.setSelectedPage} />
             <section>
                 <Grid className='topPage' direction='column'>
                     <Grid container className='swePortfolioEleWrapper' direction='column' alignItems='center'>

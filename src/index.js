@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const RootWrapper = () => {
   const [isLandscape, setIsLandscape] = useState(window.outerWidth > window.outerHeight);
-  const [selectedPage, setSelectedPage] = useState('about');
+  const [selectedPage, setSelectedPage] = useState('About');
 
   const isLandscapeListener = () => {
     console.log( (window.outerWidth > window.outerHeight) ? 'landscape' : 'portrait')
@@ -28,12 +28,12 @@ const RootWrapper = () => {
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <About isLandscape={isLandscape}/> } />
-          <Route path='/edu&cert' element={<EducationCertification isLandscape={isLandscape} />} />
-          <Route path='/workexp' element={<WorkExperience isLandscape={isLandscape} />} />
-          <Route path='/portfolio' element={<Portfolio isLandscape={isLandscape} />} />
-          <Route path='/portfolio/SWEPortfolio' element={<SWEPortfolio isLandscape={isLandscape} />} />
-          <Route path='/portfolio/DAPortfolio' element={<DAPortfolio isLandscape={isLandscape} />} />
+          <Route path="/" element={ <About isLandscape={isLandscape} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path='/edu&cert' element={<EducationCertification isLandscape={isLandscape} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path='/workexp' element={<WorkExperience isLandscape={isLandscape} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path='/portfolio' element={<Portfolio isLandscape={isLandscape} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path='/portfolio/SWEPortfolio' element={<SWEPortfolio isLandscape={isLandscape} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />} />
+          <Route path='/portfolio/DAPortfolio' element={<DAPortfolio isLandscape={isLandscape} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>

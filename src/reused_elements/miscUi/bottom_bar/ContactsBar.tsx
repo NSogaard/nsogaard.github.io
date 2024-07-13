@@ -8,7 +8,7 @@ import Link from '@mui/material/Link';
 const ContactsBar = () => {
 
     return (
-        <Grid container className='contactsBar' >
+        <Grid container className='contactsBar'>
             <Link target="_blank" href='http://www.linkedin.com/in/niels-sogaard-22a05823b' className='socialLink' color='#000000'><LinkedInIcon className='socialButton' /></Link>
             <Link target="_blank" href='https://github.com/NSogaard' className='socialLink' color='#000000'><GitHubIcon className='socialButton' /></Link>
             <Link target="_blank" href='mailto:niels.sogaard2@gmail.com' className='socialLink' color='#000000'><EmailIcon className='socialButton' /></Link>

@@ -14,7 +14,8 @@ const TextImageElement = (props : {
     hasDialog : boolean,
     isLandscape : boolean,
     height : number,
-    isActive : boolean    
+    isActive : boolean,
+    setSelectedPage? : any
 }) => {
     const [open, setOpen] = useState(false);
 
@@ -28,6 +29,15 @@ const TextImageElement = (props : {
 
     const navigate = useNavigate();
 
+    const handleRedirectInternal = () => {
+        props.setSelectedPage(props.title)
+        navigate(`${props.redirectLink}`)
+    }
+
+    const handleRedirectExternal = () => {
+        window.open(props.redirectLink, '_blank', 'noreferrer')
+    }
+
     return (
         <Fragment>
             <Grid
@@ -36,7 +46,7 @@ const TextImageElement = (props : {
                 direction='row'
                 justifyContent='center'
                 xs={props.isLandscape ? 6 : 9}
-                onClick={(props.isActive) ? () => {(props.hasDialog) ? handleOpen() : ((props.redirectLink?.includes('https')) ?  window.open(props.redirectLink, '_blank', 'noreferrer') : navigate(`${props.redirectLink}`))} : () => {}}
+                onClick={(props.isActive) ? () => {(props.hasDialog) ? handleOpen() : ((props.redirectLink?.includes('https')) ? handleRedirectExternal() : handleRedirectInternal())} : () => {}}
                 sx={{height: `${props.height}vh`}}
             >
                 <Grid item xs={3} height='fit-content' alignSelf='center'>

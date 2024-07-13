@@ -4,14 +4,14 @@ import PortfolioOption from './PortfolioOption.tsx'
 import loremIpsum from '../styling/loremIpsum.tsx'
 import TextImageElement from '../edu-cert/text_image_element/TextImageElement.tsx'
 
-const PortfolioSelector = (props : {isLandscape : boolean}) => {
+const PortfolioSelector = (props : {isLandscape : boolean, setSelectedPage : any} ) => {
 
     return (
         <Grid container className='portSelector' direction='column' alignItems='center'>
             <h1>Portfolios</h1>
             <Grid item container className='portSelectorWrapper' justifyContent='center'>
                 <TextImageElement 
-                    title='Software Development Portfolio'
+                    title='Software Engineering Portfolio'
                     textBody={loremIpsum}
                     imgPath='https://imageio.forbes.com/blogs-images/forbestechcouncil/files/2019/01/canva-photo-editor-8-7.png?height=640&width=640&fit=bounds'
                     redirectLink={`SWEPortfolio`}
@@ -19,6 +19,7 @@ const PortfolioSelector = (props : {isLandscape : boolean}) => {
                     isLandscape={props.isLandscape}
                     height={25}
                     isActive={true}
+                    setSelectedPage={props.setSelectedPage}
                 />
                 <TextImageElement 
                     title='Data Analytics Portfolio (To Be Completed During Boot Camp)'

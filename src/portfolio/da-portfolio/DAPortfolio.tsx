@@ -5,11 +5,11 @@ import BottomBar from "../../reused_elements/miscUi/bottom_bar/BottomBar.tsx";
 import { Grid, useThemeProps } from "@mui/material";
 import TextImageElement from "../../edu-cert/text_image_element/TextImageElement.tsx";
 
-const DAPortfolio = (props : {isLandscape : boolean}) => {
+const DAPortfolio = (props : {isLandscape : boolean, selectedPage : string, setSelectedPage : any}) => {
 
     return(
         <div className='wrapperPage' style={{height: '100vh'}}>
-            <Navbar />
+            <Navbar selectedPage={props.selectedPage} setSelectedPage={props.setSelectedPage} />
             <section>
                 <Grid className='topPage' direction='column'>  
                     <Grid container className='swePortfolioEleWrapper' direction='column' alignItems='center'>

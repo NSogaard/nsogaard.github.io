@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import Navbar from '../reused_elements/navbar/Navbar.tsx';
 import './../styling/parentStyle.css'
 import HelloThere from './HelloThere.tsx';
@@ -9,14 +9,14 @@ import { Grid } from '@mui/material';
 import BottomBar from '../reused_elements/miscUi/bottom_bar/BottomBar.tsx';
 import SkillsList from './skills-list/SkillsList.tsx';
 
-const About = (props : { isLandscape : boolean }) => {
+const About = (props : { isLandscape : boolean, selectedPage : string, setSelectedPage : any}) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
 
     return(
         <div className='wrapperPage'>
-            <Navbar />
+            <Navbar selectedPage={props.selectedPage} setSelectedPage={props.setSelectedPage} />
             <section>
                 <Grid className='topPage' direction='column'>
                     <HelloThere isLandscape={props.isLandscape} />

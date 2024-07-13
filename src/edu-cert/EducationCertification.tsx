@@ -8,7 +8,7 @@ import { EduListInfo, EducationList } from "./EducationList.tsx";
 import CertificationsList from "./certifications/CertificationsList.tsx";
 import { CertificationInfo } from "./certifications/Certification.tsx";
 
-const EducationCertification = (props : {isLandscape : boolean}) => {
+const EducationCertification = (props : {isLandscape : boolean, selectedPage : string, setSelectedPage : any}) => {
     const educationListInfo : EduListInfo[] = [
         {
             title: 'B.A. at Case Western Reserve University (2020 - 2024)',
@@ -93,7 +93,7 @@ const EducationCertification = (props : {isLandscape : boolean}) => {
 
     return (
         <div className='wrapperPage'>
-            <Navbar />
+            <Navbar selectedPage={props.selectedPage} setSelectedPage={props.setSelectedPage}/>
             <section>
                 <Grid className='topPage' direction='column'>
                     <EducationList infoList={educationListInfo} isLandscape={props.isLandscape} />
