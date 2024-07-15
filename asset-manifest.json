@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.90504371.css",
+    "main.css": "/static/css/main.debd156e.css",
     "main.js": "/static/js/main.adda07a0.js",
     "static/js/453.2ddb282f.chunk.js": "/static/js/453.2ddb282f.chunk.js",
     "static/media/Technologist.png": "/static/media/Technologist.bededf07f20ea6225fbc.png",
     "index.html": "/index.html",
-    "main.90504371.css.map": "/static/css/main.90504371.css.map",
+    "main.debd156e.css.map": "/static/css/main.debd156e.css.map",
     "main.adda07a0.js.map": "/static/js/main.adda07a0.js.map",
     "453.2ddb282f.chunk.js.map": "/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90504371.css",
+    "static/css/main.debd156e.css",
     "static/js/main.adda07a0.js"
   ]
 }
