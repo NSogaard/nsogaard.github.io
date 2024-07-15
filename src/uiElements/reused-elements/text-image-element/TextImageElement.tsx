@@ -79,7 +79,7 @@ const TextImageElement = (props : {
                 sx={{height: `${props.height}vh`}}
             >
                 <Grid item xs={3} height='fit-content' alignSelf='center'>
-                    <Image className='textImageImage' src={props.imgPath} style={(props.isActive) ? {} : {filter: 'grayscale(75%)'}}/>
+                    <Image className='textImageImage' src={props.imgPath} style={(props.isActive) ? {maxHeight: `${props.height * 0.75}vh`} : {filter: 'grayscale(75%)', maxHeight: `${props.height * 0.75}vh`}}/>
                 </Grid>
                 <Grid container className='textImageText' xs={9} direction='column'  height='fit-content' alignSelf='center'>
                     <Grid><h3>{props.title}</h3></Grid>

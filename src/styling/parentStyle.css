@@ -188,7 +188,7 @@ section {
     color: darkgray;
 
     .textImageImage {
-        width: 75%!important;
+        max-width: fit-content;
     }
     
     .textImageText {        
