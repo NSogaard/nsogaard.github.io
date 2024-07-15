@@ -188,7 +188,7 @@ section {
     color: darkgray;
 
     .textImageImage {
-        width: 15vh!important;
+        width: 75%!important;
     }
     
     .textImageText {        
@@ -286,8 +286,7 @@ section {
         }
 
         .certImage {
-            height: 5vh!important;
-            width: fit-content;
+            width: 50%!important;
         }
 
         h3 {
