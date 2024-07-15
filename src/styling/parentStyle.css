@@ -197,13 +197,23 @@ section {
         }
     }
     
-    .teImgBody {
-        height: fit-content;
-        
-        p {
-            margin: 0 0 0 0;
+    .teImgBodyWrapper {
+        width: 75%;
+
+        .teImgBody {
+            max-width: calc(max-content);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp : 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+            p {
+                margin: 0 0 0 0;
+            }
         }
     }
+    
 }
 
 .active {
@@ -231,7 +241,7 @@ section {
     .dialogImage {
         height: 35%!important;
         width: fit-content!important;
-        margin: 5% 0 5% 0;
+        margin: 0 0 5% 0;
     }
 
     .dialogTitle {
@@ -240,8 +250,7 @@ section {
 
     .dialogDesc { 
         max-height: 35%;
-        margin: 5% 0 0 0;
-        ;
+        margin: 5% 0 5% 0;
     }
 
     .arrowIcon {

@@ -1,15 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import EducationCertification from './edu-cert/EducationCertification.tsx';
-import About from './about/About.tsx';
-import './styling/parentStyle.css';
-import WorkExperience from './work-experience/WorkExperience.tsx';
-import Portfolio from './portfolio/Portfolio.tsx';
-import SWEPortfolio from './portfolio/swe-portfolio/SWEPortfolio.tsx';
-import DAPortfolio from './portfolio/da-portfolio/DAPortfolio.tsx';
+import EducationCertification from './uiElements/edu-cert/EducationCertification.tsx';
+import About from './uiElements/about/About.tsx';
+import './styling/parentStyle.css'
+import WorkExperience from './uiElements/work-experience/WorkExperience.tsx';
+import Portfolio from './uiElements/portfolio/Portfolio.tsx';
+import SWEPortfolio from './uiElements/portfolio/swe-portfolio/SWEPortfolio.tsx';
+import DAPortfolio from './uiElements/portfolio/da-portfolio/DAPortfolio.tsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
